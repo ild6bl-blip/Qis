@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا | أجواء</title>
+    <!-- ربط ملف CSS الخارجي باستخدام link -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ======================================================
+         شريط التصفح - القسم الأول (nav)
+         ====================================================== -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🍽️ أجواء</a>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="moods.html">الأجواء</a></li>
+                <li><a href="restaurants.html">المطاعم</a></li>
+                <li><a href="contact.html" class="active">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ======================================================
+         المحتوى الرئيسي - القسم الثاني (main)
+         ====================================================== -->
+    <main>
+
+        <!-- Hero -->
+        <div class="hero" style="min-height: 35vh;">
+            <div class="hero-content">
+                <h1>📬 تواصل معنا</h1>
+                <p>نحن هنا للإجابة على استفساراتك ومساعدتك في إيجاد تجربة الطعام المثالية</p>
+            </div>
+        </div>
+
+        <!-- بطاقات التواصل -->
+        <div class="section section-pale">
+            <div class="container">
+                <div class="section-title">
+                    <h2>طرق التواصل</h2>
+                    <div class="divider"></div>
+                    <p>نحن متاحون عبر عدة قنوات للتواصل معك</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <span class="contact-icon">📧</span>
+                        <h3>البريد الإلكتروني</h3>
+                        <p class="contact-value">info@ajwaa.sa</p>
+                        <p class="contact-note">نرد خلال 24 ساعة</p>
+                    </div>
+                    <div class="contact-card">
+                        <span class="contact-icon">📞</span>
+                        <h3>الهاتف</h3>
+                        <p class="contact-value">+966 50 000 0000</p>
+                        <p class="contact-note">من 9 صباحاً حتى 10 مساءً</p>
+                    </div>
+                    <div class="contact-card">
+                        <span class="contact-icon">📍</span>
+                        <h3>الموقع</h3>
+                        <p class="contact-value">الرياض، المملكة العربية السعودية</p>
+                        <p class="contact-note">حي العليا، برج الأعمال</p>
+                    </div>
+                    <div class="contact-card">
+                        <span class="contact-icon">💬</span>
+                        <h3>واتساب</h3>
+                        <p class="contact-value">+966 50 000 0001</p>
+                        <p class="contact-note">رد فوري طوال اليوم</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- نموذج التواصل -->
+        <div class="section section-light">
+            <div class="container">
+                <div class="section-title">
+                    <h2>أرسل لنا رسالة</h2>
+                    <div class="divider"></div>
+                    <p>أخبرنا عن استفسارك وسنتواصل معك في أقرب وقت</p>
+                </div>
+                <div class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل *</label>
+                            <input type="text" id="name" name="name" placeholder="أدخل اسمك الكامل" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني *</label>
+                            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">رقم الجوال</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+966 5X XXX XXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">موضوع الرسالة *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">اختر الموضوع</option>
+                                <option value="restaurant">اقتراح مطعم جديد</option>
+                                <option value="mood">استفسار عن جو معين</option>
+                                <option value="review">مشاركة تجربة</option>
+                                <option value="complaint">تقديم شكوى</option>
+                                <option value="partnership">طلب شراكة</option>
+                                <option value="other">موضوع آخر</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mood-pref">الجو المفضل لديك</label>
+                        <select id="mood-pref" name="mood-pref">
+                            <option value="">اختر جوّك المفضل</option>
+                            <option value="relax">😌 استرخاء وهدوء</option>
+                            <option value="luxury">👑 أجواء فخمة</option>
+                            <option value="photo">📸 مكان للتصوير</option>
+                            <option value="family">👨‍👩‍👧‍👦 جلسة عائلية</option>
+                            <option value="energy">⚡ أجواء حماسية</option>
+                            <option value="romantic">💕 رومانسي</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">رسالتك *</label>
+                        <textarea id="message" name="message" placeholder="اكتب رسالتك هنا..." required></textarea>
+                    </div>
+                    <button type="button" class="btn-submit" onclick="sendMessage()">
+                        إرسال الرسالة ✉️
+                    </button>
+                    <div id="success-msg" style="display:none; margin-top:1rem; padding:1rem; background:#e8f5e9; border-radius:10px; color:#2e7d32; text-align:center; font-weight:700;">
+                        ✅ تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- الأسئلة الشائعة -->
+        <div class="section section-pale">
+            <div class="container">
+                <div class="section-title">
+                    <h2>الأسئلة الشائعة</h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="faq-item">
+                    <h3>❓ كيف يتم اختيار المطاعم في أجواء؟</h3>
+                    <p>نقوم بزيارة المطاعم شخصياً وتقييمها بناءً على الأجواء والمشاعر التي تُولّدها، وليس فقط جودة الطعام. فريقنا المتخصص يزور كل مطعم ويختبر تجربته بشكل كامل قبل إضافته.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>❓ هل يمكنني اقتراح مطعم لإضافته؟</h3>
+                    <p>بالتأكيد! نرحب بجميع الاقتراحات. يمكنك إرسال اسم المطعم وموقعه وسبب اعتقادك أنه يناسب إحدى الأجواء المتاحة عبر نموذج التواصل أعلاه.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>❓ هل الخدمة مجانية؟</h3>
+                    <p>نعم، موقع أجواء مجاني تماماً للمستخدمين. نحن نؤمن بأن الجميع يستحق تجربة طعام مثالية تناسب مشاعره.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>❓ هل تغطون مدناً خارج الرياض؟</h3>
+                    <p>حالياً نغطي الرياض وجدة والدمام، ونعمل على التوسع لتشمل جميع مدن المملكة العربية السعودية قريباً.</p>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ======================================================
+         التذييل - القسم الثالث (footer)
+         جميع الحقوق محفوظة لـ أجواء
+         ====================================================== -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>🍽️ أجواء</h4>
+                <p>منصة سياحية مبتكرة تُصنِّف المطاعم حسب المشاعر والأجواء، لأن التجربة أهم من الطعام.</p>
+            </div>
+            <div class="footer-col">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="index.html">🏠 الصفحة الرئيسية</a></li>
+                    <li><a href="moods.html">🎭 الأجواء والمشاعر</a></li>
+                    <li><a href="restaurants.html">🍴 المطاعم</a></li>
+                    <li><a href="contact.html">📬 تواصل معنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>الأجواء المتاحة</h4>
+                <ul>
+                    <li><a href="restaurants.html">😌 استرخاء وهدوء</a></li>
+                    <li><a href="restaurants.html">👑 أجواء فخمة</a></li>
+                    <li><a href="restaurants.html">👨‍👩‍👧‍👦 جلسة عائلية</a></li>
+                    <li><a href="restaurants.html">💕 رومانسي</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>تواصل معنا</h4>
+                <div class="contact-info">
+                    <div>📧 info@ajwaa.sa</div>
+                    <div>📞 +966 50 000 0000</div>
+                    <div>📍 الرياض، المملكة العربية السعودية</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            جميع الحقوق محفوظة لـ <span>أجواء</span> &copy; 2025 | تم التصميم بـ ❤️
+        </div>
+    </footer>
+
+    <script>
+        function sendMessage() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            if (!name || !email || !message) {
+                alert('يرجى ملء جميع الحقول المطلوبة (*)');
+                return;
+            }
+            document.getElementById('success-msg').style.display = 'block';
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('message').value = '';
+        }
+    </script>
+
+</body>
+</html>

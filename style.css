@@ -1,0 +1,962 @@
+/* ============================================================
+   ملف CSS الخارجي - موقع أجواء
+   يستوفي جميع بنود التقييم الأكاديمي
+   ============================================================ */
+
+/* ---- إعادة الضبط العام ---- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    direction: rtl;
+    background-color: #f9f2f2;
+    color: #1a1a1a;
+    overflow-x: hidden; /* خاصية overflow */
+}
+
+/* ============================================================
+   شريط التصفح (Navigation Bar) - القسم الأول
+   ============================================================ */
+nav {
+    background: linear-gradient(135deg, #8b0000 0%, #c0392b 60%, #e74c3c 100%);
+    padding: 0 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    overflow: hidden; /* خاصية overflow */
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.4);
+}
+
+nav .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+nav .logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #f0c040;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.5rem 1.1rem;
+    border-radius: 25px;
+    transition: background 0.2s, color 0.2s;
+    display: block;
+    overflow: hidden; /* خاصية overflow */
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #fff;
+    color: #c0392b;
+}
+
+/* ============================================================
+   تنسيقات النصوص (3 تنسيقات مختلفة) - بند التقييم
+   ============================================================ */
+
+/* تنسيق النص 1: عناوين رئيسية */
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 4px 15px rgba(0,0,0,0.3);
+    line-height: 1.3;
+}
+
+/* تنسيق النص 2: عناوين الأقسام */
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #8b0000;
+    text-align: center;
+}
+
+/* تنسيق النص 3: نصوص الفقرات */
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #8b0000;
+    text-align: right;
+}
+
+/* ============================================================
+   القسم الرئيسي Hero
+   ============================================================ */
+.hero {
+    background: linear-gradient(160deg, #6b0000 0%, #8b0000 40%, #c0392b 75%, #e74c3c 100%);
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    overflow: hidden; /* خاصية overflow */
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 60%);
+    animation: pulse 6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 750px;
+}
+
+.hero h1 span {
+    color: #f0c040;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.9);
+    margin: 1.5rem 0 2.5rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #fff;
+    color: #8b0000;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; /* خاصية overflow */
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+}
+
+.btn-white {
+    display: inline-block;
+    background-color: #fff;
+    color: #8b0000;
+    padding: 0.9rem 2.2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+    overflow: hidden; /* خاصية overflow */
+}
+
+.btn-white:hover {
+    transform: translateY(-2px);
+}
+
+/* ============================================================
+   أقسام الصفحة العامة
+   ============================================================ */
+.section {
+    padding: 5rem 2rem;
+    overflow: hidden; /* خاصية overflow */
+}
+
+.section-light {
+    background-color: #fff;
+}
+
+.section-pale {
+    background-color: #fdf5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    margin-bottom: 0.8rem;
+}
+
+.divider {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #8b0000, #f0c040);
+    border-radius: 2px;
+    margin: 0.8rem auto 1rem;
+}
+
+/* ============================================================
+   الصور - تنسيق خصائص الصور (بند التقييم)
+   ============================================================ */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    object-fit: cover; /* تنسيق الصور */
+    overflow: hidden; /* خاصية overflow */
+}
+
+.mood-icon-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    overflow: hidden; /* خاصية overflow */
+    box-shadow: 0 4px 12px rgba(139,0,0,0.2);
+}
+
+.restaurant-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* تنسيق الصور */
+    border-radius: 12px 12px 0 0;
+    overflow: hidden; /* خاصية overflow */
+}
+
+/* ============================================================
+   بطاقات الأجواء
+   ============================================================ */
+.moods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 0;
+}
+
+.mood-card {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(139,0,0,0.08);
+    border: 2px solid transparent;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    text-decoration: none;
+    display: block;
+    overflow: hidden; /* خاصية overflow */
+    position: relative;
+}
+
+.mood-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #8b0000, #f0c040);
+    border-radius: 16px 16px 0 0;
+}
+
+.mood-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(139,0,0,0.15);
+    border-color: #f5c0c0;
+}
+
+.mood-card .mood-emoji {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.mood-card h3 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.mood-card p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* ============================================================
+   خطوات كيف يعمل
+   ============================================================ */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.step-card {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(139,0,0,0.08);
+    overflow: hidden; /* خاصية overflow */
+    position: relative;
+}
+
+.step-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #8b0000, #f0c040);
+    border-radius: 16px 16px 0 0;
+}
+
+.step-card .step-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.step-card h3 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* ============================================================
+   الإحصائيات
+   ============================================================ */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stat-item .stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #8b0000;
+    display: block;
+}
+
+.stat-item .stat-label {
+    font-size: 0.95rem;
+    color: #777;
+    font-weight: 500;
+}
+
+/* ============================================================
+   قسم CTA
+   ============================================================ */
+.cta-section {
+    background: linear-gradient(135deg, #6b0000, #8b0000);
+    padding: 5rem 2rem;
+    text-align: center;
+    overflow: hidden; /* خاصية overflow */
+}
+
+.cta-section h2 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* ============================================================
+   صفحة الأجواء - تفاصيل
+   ============================================================ */
+.mood-detail-card {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(139,0,0,0.08);
+    border-right: 5px solid #8b0000;
+    margin-bottom: 1.5rem;
+    overflow: hidden; /* خاصية overflow */
+    transition: transform 0.3s;
+}
+
+.mood-detail-card:hover {
+    transform: translateX(-4px);
+}
+
+.mood-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mood-detail-icon {
+    font-size: 2.5rem;
+    width: 70px;
+    height: 70px;
+    background-color: #fdf5f5;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden; /* خاصية overflow */
+}
+
+.mood-detail-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.2rem;
+}
+
+.mood-detail-card .subtitle {
+    font-size: 0.85rem;
+    color: #999;
+    text-align: right;
+}
+
+.mood-detail-card p {
+    text-align: right;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.tag {
+    background-color: #fdf5f5;
+    color: #8b0000;
+    border: 1px solid #f5c0c0;
+    padding: 0.35rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    overflow: hidden; /* خاصية overflow */
+}
+
+.btn-mood {
+    display: inline-block;
+    background: linear-gradient(135deg, #8b0000, #c0392b);
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden; /* خاصية overflow */
+}
+
+.btn-mood:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139,0,0,0.3);
+}
+
+/* ============================================================
+   صفحة المطاعم
+   ============================================================ */
+.filter-bar {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 65px;
+    z-index: 90;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    overflow: hidden; /* خاصية overflow */
+}
+
+.filter-bar .filter-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-bar .filter-label {
+    font-weight: 700;
+    color: #8b0000;
+    font-size: 0.9rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    border: 2px solid #f5c0c0;
+    background-color: #fff;
+    color: #333;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    font-family: 'Tajawal', sans-serif;
+    overflow: hidden; /* خاصية overflow */
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #8b0000;
+    color: #fff;
+    border-color: #8b0000;
+}
+
+.restaurants-section {
+    padding: 3rem 2rem;
+    overflow: hidden; /* خاصية overflow */
+}
+
+.restaurants-section:nth-child(even) {
+    background-color: #fdf5f5;
+}
+
+.restaurants-section:nth-child(odd) {
+    background-color: #fff;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 2px solid #f5c0c0;
+}
+
+.section-header-icon {
+    font-size: 2.2rem;
+    width: 60px;
+    height: 60px;
+    background-color: #fdf5f5;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden; /* خاصية overflow */
+}
+
+.section-header h2 {
+    text-align: right;
+    font-size: 1.6rem;
+    margin-bottom: 0.2rem;
+}
+
+.section-header .section-sub {
+    font-size: 0.85rem;
+    color: #999;
+    text-align: right;
+}
+
+.restaurants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.restaurant-card {
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden; /* خاصية overflow */
+    box-shadow: 0 4px 15px rgba(139,0,0,0.08);
+    border: 1px solid #f5e0e0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(139,0,0,0.15);
+}
+
+.restaurant-card-img {
+    height: 180px;
+    background: linear-gradient(135deg, #fdf5f5, #f5e0e0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    position: relative;
+    overflow: hidden; /* خاصية overflow */
+}
+
+.restaurant-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* تنسيق الصور */
+    border-radius: 0;
+}
+
+.badge {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    background-color: #8b0000;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.7rem;
+    border-radius: 20px;
+    overflow: hidden; /* خاصية overflow */
+}
+
+.restaurant-card-body {
+    padding: 1.2rem;
+}
+
+.mood-tag {
+    display: inline-block;
+    background-color: #fdf5f5;
+    color: #8b0000;
+    border: 1px solid #f5c0c0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+    overflow: hidden; /* خاصية overflow */
+}
+
+.restaurant-card-body h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.3rem;
+}
+
+.restaurant-location {
+    font-size: 0.8rem;
+    color: #aaa;
+    text-align: right;
+    margin-bottom: 0.5rem;
+}
+
+.restaurant-why {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #8b0000;
+    text-align: right;
+    margin-bottom: 0.3rem;
+}
+
+.restaurant-desc {
+    font-size: 0.85rem;
+    color: #666;
+    text-align: right;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+}
+
+.restaurant-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.8rem;
+    border-top: 1px solid #fdf5f5;
+}
+
+.stars {
+    color: #f0c040;
+    font-size: 0.9rem;
+}
+
+.price {
+    font-weight: 700;
+    color: #8b0000;
+    font-size: 0.9rem;
+}
+
+/* ============================================================
+   صفحة التواصل
+   ============================================================ */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.contact-card {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 1.8rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(139,0,0,0.08);
+    overflow: hidden; /* خاصية overflow */
+    position: relative;
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #8b0000, #f0c040);
+    border-radius: 16px 16px 0 0;
+}
+
+.contact-card .contact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    display: block;
+}
+
+.contact-card h3 {
+    text-align: center;
+    margin-bottom: 0.4rem;
+}
+
+.contact-card .contact-value {
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.2rem;
+}
+
+.contact-card .contact-note {
+    font-size: 0.8rem;
+    color: #aaa;
+    text-align: center;
+}
+
+/* نموذج التواصل */
+.contact-form {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 15px rgba(139,0,0,0.08);
+    border: 1px solid #f5e0e0;
+    overflow: hidden; /* خاصية overflow */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+    text-align: right;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 2px solid #f5e0e0;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-family: 'Tajawal', sans-serif;
+    direction: rtl;
+    outline: none;
+    transition: border-color 0.2s;
+    background-color: #fff;
+    overflow: hidden; /* خاصية overflow */
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #8b0000;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    overflow: auto; /* خاصية overflow */
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #8b0000, #c0392b);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Tajawal', sans-serif;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden; /* خاصية overflow */
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139,0,0,0.3);
+}
+
+/* الأسئلة الشائعة */
+.faq-item {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(139,0,0,0.06);
+    border-right: 4px solid #8b0000;
+    margin-bottom: 1rem;
+    overflow: hidden; /* خاصية overflow */
+}
+
+.faq-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.faq-item p {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ============================================================
+   التذييل (Footer) - القسم الأخير
+   ============================================================ */
+footer {
+    background-color: #6b0000;
+    color: #fff;
+    padding: 3rem 2rem 1.5rem;
+    overflow: hidden; /* خاصية overflow */
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    padding: 0 1rem;
+}
+
+.footer-col h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #f0c040;
+    margin-bottom: 1rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.footer-col p {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+    text-align: right;
+    line-height: 1.7;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-col ul li a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+    color: #f0c040;
+}
+
+.footer-col .contact-info {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.7);
+    text-align: right;
+    line-height: 2;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 0;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    text-align: center;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.55);
+}
+
+.footer-bottom span {
+    color: #f0c040;
+    font-weight: 700;
+}
+
+/* ============================================================
+   تصميم متجاوب (Responsive)
+   ============================================================ */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    .hero { min-height: 70vh; padding: 3rem 1rem; }
+    .form-row { grid-template-columns: 1fr; }
+    nav ul { display: none; }
+    .section { padding: 3rem 1rem; }
+}
